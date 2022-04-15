@@ -125,8 +125,14 @@ img {
   margin-right: 46px;
 }
 
+.navigation-item {
+  position: relative;
+}
+
 
 .navigation-item-link {
+  display: inline-block;
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
@@ -141,6 +147,50 @@ img {
 .navigation-item-link:hover,
 .navigation-item-link:focus {
   color: var(--decorative-color);
+}
+
+.navigation-item-link::after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--decorative-color);
+  transform: translateY(31.25px);
+  border-radius: 2px;
+}
+
+.navigation-item-link:hover::after,
+.navigation-item-link:focus::after {
+  display: block;
+}
+
+.index-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--decorative-color);
+  transform: translateY(31.25px);
+  border-radius: 2px;
+}
+
+.portfolio-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--decorative-color);
+  transform: translateY(31.25px);
+  border-radius: 2px;
 }
 
 .mail-icon {
@@ -624,7 +674,7 @@ img {
 
 .images-list-overlay-paragraph {
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.556;
   color: var(--third-color);
   margin: 0;
 }
@@ -658,3 +708,15 @@ img {
   border-left: 1px solid var(--portfolio-list-border-color);
   border-bottom: 1px solid var(--portfolio-list-border-color);
 }
+
+/* okno modalne */
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
