@@ -44,7 +44,7 @@
             <section class="solutions section">
                   <div class="container">
                         <h1 class="head-one">EFEKTYWNE ROZWIĄZANIA</br> DLA WASZEGO BIZNESU</h1>
-                        <button class="button-one" type="button">Zamów usługę</button>
+                        <button class="button-one" type="button" data-modal-open>Zamów usługę</button>
                   </div>
             </section>
             <!--Nasze atuty-->
@@ -353,13 +353,14 @@
             </div>
       </footer>
 
-      <div class="backdrop">
+      <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                  <svg class="close-btn">
-                        <use></use>
+                  <svg class="close-btn" data-modal-close>
+                  <use href="images\icons.svg#icon-closebutton"></use>
                   </svg>
             </div>
       </div>
-
+      
+      <script src="js\modal.js"></script>
 </body>
 </html>
